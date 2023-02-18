@@ -1,0 +1,217 @@
+@font-face {
+  font-family: PTSans;
+  src: url(../fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: PlayfairDisplay-Regular;
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+:root {
+  --bg__black: #000000;
+  --bg__semi-black: #0f0f0f;
+  --bg__semi-grey: #1f1f1f;
+  --bg__watch-grey: #191b1c;
+  --text__grey: #808080;
+  --text__white: #ffffff;
+  --text__watch-grey: #d0d0d0;
+}
+
+.footer-wrapper {
+  background: url(../images/footer_bg.png);
+  min-height: 450px;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-wrapper__block {
+  max-width: 350px;
+  color: var(--text__white);
+}
+
+.footer-wrapper__block:nth-child(1) {
+  margin-left: 20px;
+}
+
+.footer-wrapper__block:nth-child(3) {
+  margin-right: 20px;
+}
+
+.footer-wrapper__block > h3 {
+  font-family: PlayfairDisplay-Regular, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31.99px;
+  text-transform: uppercase;
+  margin: 80px 0 40px 0;
+}
+
+.footer-wrapper__block > p,
+.footer-wrapper__block__btns-wrapper a,
+.footer-wrapper__block button {
+  font-family: PTSans, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer-wrapper__block__btns-wrapper {
+  gap: 6px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-wrapper__block__btns-wrapper > button {
+  padding: 10px 20px;
+  margin-bottom: 14px;
+  background-color: var(--bg__semi-black);
+  transition: 0.2s;
+}
+.footer-wrapper__block__btns-wrapper > button:hover {
+  background-color: var(--text__grey);
+  opacity: 0.9;
+}
+
+.footer-wrapper__block__btns-wrapper a {
+  color: var(--text__watch-grey);
+}
+
+.footer-wrapper__block form {
+  margin-top: 26px;
+  display: flex;
+}
+
+.footer-wrapper__block input {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 210px;
+  height: 42px;
+  padding-left: 15px;
+}
+
+.footer-wrapper__block input::placeholder {
+  color: var(--text__watch-grey);
+}
+
+.footer-wrapper__block form > button {
+  background-color: var(--bg__semi-black);
+  width: 137px;
+  height: 42px;
+  transition: 0.2s;
+  padding: 10px 20px;
+}
+
+.footer-wrapper__block form > button:hover {
+  background-color: var(--text__grey);
+  opacity: 0.9;
+}
+
+.user-agreement {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 1110px;
+  align-items: center;
+}
+
+.user-agreement p,
+.user-agreement a {
+  font-family: PTSans, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15.53px;
+  color: var(--text__watch-grey);
+}
+
+.user-agreement p {
+  margin-left: 10px;
+}
+
+.user-agreement a {
+  text-align: right;
+  border-bottom: 1px solid var(--text__watch-grey);
+  transition: 0.2s;
+  margin-right: 10px;
+}
+
+.user-agreement a:hover {
+  color: var(--text__white);
+}
+
+.user-agreement__wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg__semi-black);
+}
+
+@media (max-width: 1200px) {
+  .footer-wrapper__block:nth-child(2) {
+    width: 235px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .footer-wrapper__block {
+    max-width: 600px;
+  }
+  .footer-wrapper__block:nth-child(1) {
+    margin-top: 50px;
+  }
+  .footer-wrapper__block:nth-child(2) {
+    margin-top: 50px;
+    width: 240px;
+  }
+  .footer-wrapper__block:nth-child(3) {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .footer-wrapper__block > h3 {
+    margin: 0 0 20px 0;
+  }
+  .footer-wrapper__block input {
+    width: 100%;
+  }
+  .footer-wrapper__block form > button {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-wrapper {
+    justify-content: flex-start;
+  }
+
+  .footer-wrapper__block:nth-child(2) {
+    width: auto;
+  }
+  .footer-wrapper__block:nth-child(1) {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .footer-wrapper__block {
+    max-width: 700px;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .footer-wrapper__block > h3 {
+    margin: 0;
+  }
+  .footer-wrapper__block__btns-wrapper > button {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile__none span {
+    display: none;
+  }
+}
